@@ -48,3 +48,38 @@ dict_2["beans"] = 500
 dict_2["garri"] = 300
 print(dict_2)
 
+import random
+target_number = random.randint(1,20)
+max_trial = 5
+print("Enter number between 1 and 20.You have 5 attempts")
+
+for attempt in range(1,max_trial + 1):
+    try:
+       guess_number = int(input(f"Enter your guessed number {attempt}:"))
+       if guess_number == target_number:
+            print(f"Congrats! you have won, the number was {target_number}")
+            break
+       elif guess_number < target_number:
+            print("Number low! Try again")
+       elif guess_number > target_number:
+            print("Number high! Try again")
+    except ValueError:
+        print("Enter a valid number")
+        continue
+else:
+    print(f"Game over! The number was {target_number}")
+  
+
+
+num = 25
+if num % 5 == 0:
+    if num % 2 == 0:
+        print("Java")
+    else:
+        print("python")
+else:
+    print("c++")          
+    
+x = [[0] * 3] * 3
+x[0][0] = 1
+print(x)
